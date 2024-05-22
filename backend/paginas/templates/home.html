@@ -1,0 +1,55 @@
+{% extends 'Basis/baseweb1.html' %}
+{% load static %}
+
+
+{% block inhoud2 %}
+
+
+<!--------------------- <div class="img-container"> --     </div> ---------------------------------------------------------------------------------------------- -->
+<div class="row">
+    <div class="col-12"> 
+        <img-container>
+            <img src="{%static 'img/paginas/BKBuiten1.jpg' %}" alt="">
+            <div class = "img-txt-home"> 
+                <div class="font10">  
+                    <br> <br>   <br> <br>  <br> <br> 
+                        Achter elke gevel gaat een verhaal schuil en die verhalen zijn de moeite van het
+                        vertellen waard.
+                </div>
+                <br>       <br>       <br> 
+                <div class="font10">
+                        Waarborgen van oorspronkelijke stedelijke bebouwing in Den Haag en 
+                        het stimuleren van de diversiteit van het gebruik van die bebouwing. Dat 
+                        is waar Stichting Behoud Waardevol Erfgoed voor staat.                    
+                </div>
+                <br> <br>       <br>       <br> 
+                <button id="buttonBK">Barthkapel Verhuur</button> 
+            </div>
+        </img-container>
+    </div>
+</div>
+<!--------------------------------------------------------------------------------------------------------------------- -->
+
+
+<!--------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="row">  
+        <div class="col-12">
+            <br>
+            <br>     <br>
+            <br>
+        </div>
+    </div>
+<!--------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<script> 
+    $('#buttonBK').on('click', function URL(){
+    location.href = "/CC/verhuurBK.html"
+    });
+</script>
+
+{% endblock %}
+
+
+{% block footer %}
+{% endblock %}
+

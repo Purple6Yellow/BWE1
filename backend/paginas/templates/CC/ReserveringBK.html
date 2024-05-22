@@ -1,0 +1,145 @@
+{% extends 'Basis/baseweb1.html'%}
+{% load static %}
+
+{% block inhoud2 %}
+
+<!---------------------------------------------------------------------------------------------------------------------->
+<div class="row">
+    <div class="col-12">  
+        <div class="img-container-bkres">
+            <img class="formaat0" src="{% static 'img/BK/BK3_Groot.jpg' %}"  alt="Barthkapel1"><br>
+            <div class = "img-text-bkres"> 
+                <div class ="font20B"> Aanvraag Barthkapel  </div>
+                <br>       <br>       <br> 
+                <div class="font9">Wij helpen u graag.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---------------------------------------------------------------------------------------------------------------------->
+<div class="FormRes">    
+<div class="row">
+    <ol class="font15"> <em> Reservering aanvragen</em> </ol>
+    <ol class="font8"> <br> </ol>
+</div> 
+<!---------------------------------------------------------------------------------------------------------------------->
+
+<div class="row">    
+
+    <div class="col-1">
+        <br>
+    </div>
+
+    <div class="col-4"> 
+        <form action="#" method="#">
+        <table>    
+            <ul> <label for="BNaam"> <em> </em> </label>
+                 <ol> <label for="BNaam"> <em> Bedrijfsnaam </em> </label> </ol>
+                 <ol> <input class="invulA" type ="text" name="BNaam" placeholder="Naam"> </ol>
+                 <ol> <label for="Naam"> <em> Voor & Achternaam </em> </label> </ol>
+                 <ol> <input class="invulA" type ="text" name="Naam" placeholder="Voor & Achternaam"> </ol>
+                 <ol> <label for="Email"> <em> Mail adres </em> </label> </ol>
+                 <ol> <input class="invulA" type ="text" name="Email" placeholder="E-mail adres"> </ol>
+            </ul>
+        </table>  
+        </form> 
+    </div>
+
+    <div class="col-1">
+        <br>
+    </div>
+    
+    <div class="col-4">
+        <form action="#" method="#">
+            <table>
+                <ul>
+                    <ol> <label for="Data"> <em> Data</em> </label> </ol>
+                    <ol> <input class="invulA" type ="datetime" name="Data" placeholder="Data"> </ol>
+                    <ol> <label for="Tijd"> <em> Tijden </em> </label> </ol>
+                    <ol> <input class="invulA" type ="text" name="Tijd" placeholder="Tijden"> </ol>
+                    <ol> <label for="Email"> <em> Mail adres </em> </label> </ol>
+                    <ol> <input class="invulA" type ="text" name="Email" placeholder="E-mail adres"> </ol>
+               </ul>
+            </table>  
+        </form>
+    </div>
+
+</div>
+<!--------------------------------------------------------------------------------------------------------------------- -->
+
+<div class="row">
+    <div class="col-12"> 
+        <ul>
+            <ol> <label for="Bericht"> <em> Bericht </em> </label> </ol> 
+            <ol> <textarea name="bericht" placeholder=""></textarea></ol>
+            <ol> <input id="buttonRes" type="submit" value="Verzend"> </ol>
+            <ol class="font12"> <br> </ol>
+        </ul>
+    </div>
+</div>
+<!--------------------------------------------------------------------------------------------------------------------- -->
+
+<div class="row">
+    <div class="col-12">  
+        <ol class="font12"> <br> </ol>
+        <ol class="font12"> <br> </ol>
+    </div>
+</div>
+<!------------------------------------------------------------------------------------------------------------------------>
+</div> <!--sluiting FormRes class -->
+<!------------------------------------------------------------------------------------------------------------------------>
+
+<!------------------------------------------------------------------------------------------------------------------------>
+<!--PLEK VOOR KALENDER-->
+<!------------------------------------------------------------------------------------------------------------------------>
+
+<div class="row">
+    <div class="col-12">  
+    <br> <br>
+    </div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------->
+<div class="row">
+    <div class="col-1"> 
+        <div> <br> </div>
+    </div>
+
+    <div class="col-10"> 
+        <div id="calendar"></div>
+    </div>
+
+    <div class="col-1"> 
+        <div> <br> </div>
+    </div>
+</div>
+<!--------------------------------------------------------------------------------------------------------------------- -->
+
+<div class="row">
+    <div class="col-12"> 
+        <ul>
+            <ol> <a href="/CC/voorwaardenBK.html"> Annuleringsvoorwaarden </a> </ol>
+            <ol> <br> </ol>
+        </ul>
+    </div>
+</div>
+<!--------------------------------------------------------------------------------------------------------------------- -->
+ 
+ <!-- Javascript; aanvraagformulier-->
+ <script src="{% static 'js/FormReserveringBK.js' %}"></script>
+ <!-- Javascript; kalender-->
+ <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.12/index.global.min.js'></script>
+ <script type="module" src="{% static 'js/kalenderzelf.js' %}"></script>
+
+
+ <!-- Javascript; aanvraagformulier-->
+ <script>
+    maxwidth = $('html').css('max-width');
+    if (maxwidth == '768px') alert("hello")
+ </script>
+
+
+{% endblock %}
+
+{% block footer %}  
+{% endblock %}

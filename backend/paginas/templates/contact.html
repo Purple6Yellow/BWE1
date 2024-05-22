@@ -1,0 +1,82 @@
+{% extends 'Basis/baseweb1.html' %}
+{% load static %}
+
+
+{% block inhoud2 %}
+<!--------------------------------------------------------------------------------------------------------------------- -->
+<div class="row">
+    <div class="col-12"> 
+        <div class="img-container">      
+            <img src="{%static 'img/paginas/BKBuiten1.jpg' %}" alt="">
+            <div class = "img-text2"> 
+                <div class="font20B">  
+                    <br> <br>   <br> <br>
+                        Dream it <br>
+                        Wish it <br>
+                        Do it <br>
+                </div>
+            </div>
+        </div> 
+    </div>
+</div>
+<!--------------------------------------------------------------------------------------------------------------------- -->
+
+<div class="row">
+    <div class="col-1">
+        <br>
+    </div>
+
+    <div class="col-5">
+        <div>
+            <H2 class ="font16"> Onze gegevens</H2>
+            <br> <br> 
+
+            <p class ="font10">
+                <strong>Adres: </strong><br> <br>
+                Brouwersgracht 2K, <br>
+                2512 ER Den Haag <br>
+                Stichtingbwe@gmail.com <br> <br> 
+
+                <strong>  Telefoon: </strong><br> <br>
+                06 14 18 70 96 <br> <br>
+                    (reserveringen voor de Barthkapel <br> gaan uitsluitend via de mail) <br>
+            </p>
+        </div>
+    </div>
+
+    <div class="col-6">   
+        <div class="afbS">  
+            <ul> 
+                <ol><img id="OverS" src="{% static 'img/Paginas/Contact.jpg' %}" alt=""></ol>
+                <ol> <br> </ol>
+                <ol class="font10"> <a href="/historie.html"> <em> Fotogalerie verleden  </em> </a> </ol>
+                <ol> <br> </ol>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="row">  
+        <div class="col-12">
+            <br>
+            <br>     <br>
+            <br>
+        </div>
+    </div>
+<!--------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<script> 
+    $('#buttonBK').on('click', function URL(){
+    location.href = "/CC/verhuurBK.html"
+    });
+</script>
+
+{% endblock %}
+
+
+{% block footer %}
+{% endblock %}
+
+
+

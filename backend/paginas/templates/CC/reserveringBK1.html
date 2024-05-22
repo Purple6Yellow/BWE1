@@ -1,0 +1,119 @@
+{% extends 'Basis/baseweb1.html'%}
+{% load static %}
+
+
+
+{% block inhoud2 %}
+<!--------------------------------------------------------------------------------------------------------------------- -->
+<div class="row">
+    <div class="col-12"> 
+        <br>
+        <br>
+        <br>
+        <br>  
+        <H2 class ="font20B TxtCenter"> Aanvraag Barthkapel  </H2>
+       
+    </div>
+</div>
+<!--------------------------------------------------------------------------------------------------------------------- -->
+
+<div class="row">  
+    <div class="col-12"> 
+        <p class="font9 TxtCenter"> Wanneer u de Barthkapel ruimte graag wil huren, kunt u hier de aanvraag doen. </p>
+    </div>
+</div>
+
+<!--------------------------------------------------------------------------------------------------------------------- -->
+<div class="row">
+    <div class="">
+        <br>
+    </div>
+
+    <div class="col-4">  
+            <img class="formaat0" src="{% static 'img/BK/BK1.jpg' %}" alt="Barthkapel1"><br>
+            <ol class="font6 TxtCenter"> <br> </ol>
+            <ol class="font12 TxtCenter"> Zaal: podium & piano</ol>
+    </div>
+
+    <div class="col-4">  
+           <img class="formaat0" src="{% static 'img/BK/BK2.jpg' %}" alt="Barthkapel2"> <br>
+            <ol class="font6 TxtCenter"> <br> </ol>
+            <ol class="font12 TxtCenter"> Zaal: ingang</ol>
+    </div>
+
+    <div class="col-4">  
+            <img class="formaat0" src="{% static 'img/BK/BK3.jpg' %}" alt="Barthkapel3"> <br>
+            <ol class="font6 TxtCenter"> <br> </ol>
+            <ol class="font12 TxtCenter"> Zaal: avondblik</ol>
+    </div>
+
+    <div class="">
+        <br>
+    </div>
+</div>
+
+<!--------------------------------------------------------------------------------------------------------------------- -->
+<div class="row">
+    <div class="col-12"> 
+        <ul>
+            <br>
+        </ul>
+    </div>
+</div>
+
+<!--------------------------------------------------------------------------------------------------------------------- -->
+<div class="row">
+
+    <div class="col-1">  
+        <br>
+    </div>
+
+    <div class="col-5 font12"> 
+        <div class="FormRes">   
+            <table>
+                <ul> (Bedrijfs) Naam </ul>
+                <ul>  <input type ="txtNaam" name="voornaam" placeholder="(Bedrijfs) Naam"> </ul>
+                <ul> Ter attentie van</ul>
+                <ul>     <input type ="text" name="achternaam" placeholder="Naam & Achternaam"></ul>
+                <ul> Email adres</ul>
+                <ul><input type ="email" name="uw emailadres" placeholder="Uw emailadres"></ul>
+                <ul></ul>
+                <ul> Datum</ul>
+                <ul><input type ="datetime" name="Datum" placeholder="Datum"></ul>
+                <ul> Tijdstip</ul>
+                <ul>     <input type ="text" name="land" placeholder="Tijd"></ul>
+                <ul> Toelichting</ul>
+                <ul> <textarea name="bericht" maxlength="5000" placeholder="Heeft u meerdere data, dan kunt u dat hier noteren."></textarea></ul>
+                <input id="buttonRes" type="submit" value="Verzend"> <br> <br>
+            </table>
+        </div>   
+    </div>
+
+    <div class="col-5">  
+            <ol> <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FBrussels&bgcolor=%23c7a11b&showCalendars=0&showTz=0&showTabs=0&showPrint=0&showTitle=0&src=MjhyN2QxcHJoanI3aDB1OXBmdXRzZG9hYzBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23D81B60" 
+                style="border:solid 1px #c7a11b" width="500" height="500" frameborder="0" scrolling="no"></iframe>
+                </iframe></ol>
+            <ol class="font8 TxtCenter"> <br> </ol>
+    </div>
+</div>
+
+<!--------------------------------------------------------------------------------------------------------------------- -->
+
+<div class="row">
+    <div class="col-12"> 
+        <ul>
+            <ol> <a href="/CC/voorwaardenBK.html"> Annuleringsvoorwaarden </a> </ol>
+            <ol> <br> </ol>
+        </ul>
+    </div>
+</div>
+<!--------------------------------------------------------------------------------------------------------------------- -->
+ 
+ <!-- Javascript-->
+ <script src="static/js/FormReserveringBK.js"></script>
+ <script src="{% static 'js/FormReserveringBK.js' %}"></script>
+
+{% endblock %}
+
+{% block footer %}  
+{% endblock %}

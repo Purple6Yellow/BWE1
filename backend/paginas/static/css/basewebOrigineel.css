@@ -1,0 +1,284 @@
+/* ------------------------------------------------------------------------------------------------------------------------------------  */
+/* CSS mobile first 
+/* ------------------------------------------------------------------------------------------------------------------------------------  */
+
+/* Fluid grid - 12 kolommen */
+[class*="col-"]{
+    float: left;
+    padding: 2px;}
+
+        .col-1 {width: 100%;}
+        .col-2 {width: 100%;}
+        .col-3 {width: 100%;}
+        .col-4 {width: 100%;}
+        .col-5 {width: 100%;}
+        .col-6 {width: 100%;}
+        .col-7 {width: 100%;}
+        .col-8 {width: 100%;}
+        .col-9 {width: 100%;}
+        .col-10 {width: 100%;}
+        .col-11 {width: 100%;}
+        .col-12 {width: 100%;}         
+
+/* Fluid grid - 12 kolommen */
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------  */
+
+header{
+    width:100%;
+    background-color:#00151be1;
+    position: fixed;
+        top:0px;
+        left:0px;
+    text-align: center;
+    color: white;
+    z-index:1;
+    max-height:200px;}
+
+footer{
+    width:100%;
+    height: 5%;
+    position: fixed;
+        bottom:2px;
+        left: 0px;
+    background-color:white;
+    text-align: center;
+    color: #c7a11b;}
+
+section{
+    background-color: inherit;
+    position: absolute;
+        top:190px;
+        left:0px;
+    width:100%;}
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------  */
+.font{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 32px;
+    color: #c7a11b;
+    }
+
+.font10{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;
+    }
+
+.font20{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 14px;}
+    
+
+
+/* -------------------menu (telefoon)----------------------------------------------------------------------------------------------------------  */
+
+/* -----menu in footer ---*/
+#menuonder {
+    max-width:1200px;
+    background-color: inherit;
+    position: relative;
+        right: 0%;
+        top: 0%;
+        transform: translate(0%, 0%);
+   }
+
+.menu-menu-container ul{
+    /* weinig te stijlen - = lijst, */
+    margin:2px;
+    padding: 5px;
+  }
+
+.menu-menu-container li{
+       /* = menu-items */
+    display:inline;
+    position:static;
+        right:0px;
+        top: 0px;
+    margin-right: 5px;
+    list-style-type:none;}
+
+.menu-menu-container li:hover{
+    background-color:#c7a11b;}
+
+/* -----menu in header ---*/
+#menuboven {
+    display:inline-block;
+    max-width:120px;
+    min-height: 60px;
+}
+    /*
+    background: url(/static/img/menu_icoon.jpeg);
+    background-repeat:no-repeat;}
+    position: relative;
+    width:95%;
+    margin: 0 auto;
+    */
+
+#menu- icon{
+    display: inline-block;
+    background: url(/static/img/menu_icoon.jpeg);
+    background-repeat: no-repeat;}
+
+
+.menu1- menu-container li{
+    position: relative;
+        right: 50%;
+        bottom: 5px;
+    display: inline;
+    margin-right: 0px;
+    list-style-type: none;
+}
+
+.menu1- menu-container a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu1- menu-container a:hover{
+    text-decoration: none;
+    color: yellow;
+}
+
+.menu2- menu {
+    display:none;
+    list-style-type: none;
+}
+
+.menu2- menu:hover {
+    display:block;
+    background-color: yellow;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------  */
+
+.img-container{
+    position: relative;
+}
+
+.img-text{
+    position: absolute;
+        top: 1%;
+        right: 1%;
+    transform: translate(-10%, 10%);
+    z-index:1;
+    color: black;
+    width: 35%;
+
+}
+
+img .img1{ /* groot, home */
+    border-color: black ;
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    opacity: 0.6;
+}
+
+.img10 {/* ,oversbwe */
+    display: block;
+    margin: 100px;
+    width: 60%;
+    height: auto;
+    border: solid 10px  #c7a11b;  /* geel bruin */
+    border-radius:10px;}
+ 
+
+/* circle vorm: clip-path: circle(50%);
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------  */
+/* CSS Groot scherm second
+/* ------------------------------------------------------------------------------------------------------------------------------------  */
+
+/* CSS Voor groot scherm 
+Mediaquery: CSS waarde wanneer scherm groter is dan smartphone / 768px  */
+@media only screen and (min-width: 768px){
+
+        /* letterlype Groot scherm ----*/
+    .font{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 24px;}
+
+    .font5{ 
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 25px;
+        font-weight: normaal;}
+        
+    .font10{ 
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 16px;}
+
+    .font20{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 12px;}
+
+    /* ---------------------------------------------------------------------------------------------------------  */
+
+    /* Fluid grid - 12 kolommen */
+
+    [class*="col-"]{
+        float: left;
+        padding: 2px;
+                }
+            .col-1 {width: 8.33%;
+                    background-color:green;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}         
+
+    /* Fluid grid - 12 kolommen */
+
+/* -------------------menu---groot scherm --------------------------------------------------------------------------------------------------  */
+    /* -----menu in footer ---*/
+    #menuonder {
+        max-width:1200px;
+        background-color: inherit;
+        position: relative;
+            right: 0%;
+            top: 0%;
+            transform: translate(0%, 0%);
+    }
+
+    .menu-menu-container ul{
+        /* weinig te stijlen - = lijst, */
+        margin:2px;
+        padding: 5px;
+    }
+
+    .menu-menu-container li{
+        /* = menu-items */
+        display:inline;
+        position:static;
+            right:0px;
+            top: 0px;
+        margin-right: 5px;
+        list-style-type:none;}
+
+    .menu-menu-container li:hover{
+        background-color:#c7a11b;}
+
+    /* -----menu in header ---*/
+  
+
+/* ------------------------------------------------------------------------------------------------------------------------------------  */
+    .container{
+        /* P:OverSBWE */
+        margin-left:10px;
+    }
+
+
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------  */
+/* -------------------------------------------------------------------------------------------------------------------------------------  */
+
