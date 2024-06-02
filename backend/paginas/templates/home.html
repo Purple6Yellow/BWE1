@@ -8,7 +8,7 @@
 <!--------------------- <div class="img-container"> --     </div> ---------------------------------------------------------------------------------------------- -->
 <div class="row">
     <div class="col-12"> 
-        <img-container>
+        <div class="img-container">
             <img src="{%static 'img/paginas/BKBuiten1.jpg' %}" alt="">
             <div class = "img-txt-home"> 
                 <div class="font10">  
@@ -25,7 +25,7 @@
                 <br> <br>       <br>       <br> 
                 <button id="buttonBK">Barthkapel Verhuur</button> 
             </div>
-        </img-container>
+        </div>
     </div>
 </div>
 <!--------------------------------------------------------------------------------------------------------------------- -->
@@ -41,11 +41,7 @@
     </div>
 <!--------------------------------------------------------------------------------------------------------------------------------------- -->
 
-<script> 
-    $('#buttonBK').on('click', function URL(){
-    location.href = "/CC/verhuurBK.html"
-    });
-</script>
+<script src="{% static 'js/Buttons.js' %}"></script>
 
 {% endblock %}
 

@@ -1,46 +1,12 @@
-/* -------------------------------------------LAPTOP2: GEKOPPELD AAN BASEWEB1---------------------------------------------------------------------------------------------------  */
-
-/* 
-section{
-    width:100%;
-    height:100%;
-    padding-top: 2.5%;  >>>  Fotogalarie, Panden
-    padding-bottom: 2%; >>> Fotogalarie
-    background-color: inherit;
-    position: absolute;
-        top:%;
-        left:0%;
-        right:2%;
-    transform: translate(0% 0%);}
-    
-footer{
-    width:100%;
-    height: 9%;
-    position: absolute;
-        bottom:0%;
-        left: 0%;
-    background-color:inherit;
-    text-align: center;
-    z-index:1;
-    color: #f4e049cc;}
-
-    .container{
-    width:100%;
-    position: absolute;
-        left: 0px;
-        top: 7%;
-    background-color:purple;
-    padding-left:0%;}
+/* -------------------------------------------LAPTOP: GEKOPPELD AAN BASEWEB1---------------------------------------------------------------------------------------------------  */
 
 
-/* ------------------------------------------------------------------------------------------------------  */
+/* -------------@media only screen and (min-width: 768px){------------------------------------------------------------------------------------------  */
 
-/* -------------------------------------------------------------------------------------------------------  */
-@media only screen and (min-width: 768px){
 /* -------------------------------------------------------------------------------------------------------  */
 
 body{
-    background-color: hsl(197, 64%, 98%);}
+    background-color: hwb(54 82% 3%);}
 
 header{
     width:100%;
@@ -50,7 +16,7 @@ header{
         left:0px;
     text-align: center;
     color: black;
-    z-index:1;
+    z-index:999;
     max-height:20%;}
 
 section{  
@@ -60,9 +26,6 @@ section{
         top:2%;
         bottom:2%;
         left:0%;}
-
-/* ---------------------------------------------------BASEWEB------------------------------------------------  */
-
 
 /* ---------------------------------------------------BASEWEB1------------------------------------------------  */
 .btnSBWE{
@@ -82,40 +45,67 @@ section{
 /* ---------------------------------------------------MENU-------------------------------------------------  */
 /* menu1-menu-container = laptop versie /  menu3-menu-container  = footer  /  menu4-menu-container  = mobiel versie */
 
-
 /*menu1*/
 .menuboven {
-    background-color: #c7a11b;
     position:absolute;
         top:10px;
     display:flex;}
 /*---*/
+/* ---------------------------------------------------MENU-------------------------------------------------  */
+
+
 .menu1-menu-container{
     display:flex;}
-
+    
+/*dropdown*/
 .menu1-menu-container li ul{
-    display:flex;
-    background-color: hsla(197, 28%, 95%, 0.882);
-    color: black;
-    width:150px;
-    height: auto;
-    border-radius:2px;
-    border: 2px black solid;
-    position:absolute;
-        top:100%;
-        left:15%;}
+    display:none;
+    background-color: hsl(0, 0%, 98%);
+    width:50%;
+    height: 400%;
+    border-radius:7%;
+    border: 2px rgb(128, 125, 125) solid;}
+
+.menu1-menu-container ul{
+    /* weinig te stijlen - = lijst, */
+    margin-right:3%;
+    padding:0%;
+    background-color:inherit;
+    position:absolute; /* plaats tov parent (absolute position): relative & static werken niet (gaat menu naar links) */
+        right: 0%;
+        top: 0%;}
+
+.menu1-menu-container li{
+/* = menu-items  over de hele lengte */
+    display:inline-block;
+    list-style-type: none;
+    padding-left:20px;
+    padding-top: 2%;}
+
+.menu1-menu-container a { 
+/* = Verwijderd de streep  &  bepaalt kleur letters */
+    text-decoration: none;
+    color: #f4ecec;
+    padding: 3%;}
+
+
+/* hover */
+.menu1-menu-container a:hover{
+    /* = streep onder de link weghalen */
+    text-decoration: none;
+    color: hsl(67, 86%, 66%);}
 
 .menu1-menu-container li:hover ul{
-    display: inline-block;}  
+    /*dropdown */
+    display: inline-block;
+    font-size: 22px;
+    color: black;}  
 
-/*dropdown*/
-.menu1-menu2{
-    background-color:hsla(193, 58%, 18%, 0.882); /* werkt niet */}
 
-.menu1-menu2 a{
-    color: black;}
+
 
 /*Mobiele versie: menu4 */
+
 .Mobiel{
     position:absolute;
         top:10px;
@@ -139,7 +129,13 @@ section{
 
 .menu4-menu-container li:hover ul{
     display:block;}
-    
+
+.menu4-menu-container a{
+    /* = streep onder de link weghalen */
+    text-decoration: none;
+    color: black;
+    padding: 5%;}
+
 /*dropdown*/
 .menu4-menu2{
     width:10px; /* vraag me af of het werkt */}
@@ -149,45 +145,16 @@ section{
 
 .menu4_menu2B{
     color:yellow;}
-
-#dropdown4 li{}
-
-#dropdown4 a{}
-
-/*---*/
-#dropdown5 li{}
-
-#dropdown5 a{}
-
 /*---*/
 
-/*gezamelijk*/
-.menu3-menu-container ul, .menu1-menu-container ul{
-    /* weinig te stijlen - = lijst, */
-    margin-right:3%;
-    padding:0%;
-    background-color:inherit;
-    position:absolute; /* plaats tov parent (absolute position): relative & static werken niet (gaat menu naar links) */
-        right: 2%;
-        top: 5%;}
-
-.menu3-menu-container li, .menu1-menu-container li{
-       /* = menu-items */
-    display:inline-block;
-    list-style-type: none;
-    padding-left:20px;
-    padding-top: 2%;}
-
-.menu3-menu-container a, .menu1-menu-container a, .menu4-menu-container a{
-    /* = streep onder de link weghalen */
-    text-decoration: none;
-    color: black;
-    padding: 5%;}
-    
-.menu3-menu-container a:hover, .menu1-menu-container a:hover, .menu4-menu-container a:hover{
-    /* = streep onder de link weghalen */
+.menu4-menu-container a:hover{
     text-decoration: none;
     color: #d7ad17;}
+
+
+
+ 
+
 
 
 /* -----------------------------------------------------------ALGEMEEN: LETTERTYPE---------------------------------------------  */
@@ -195,6 +162,8 @@ section{
     color: #f4e049cc;}
 .colorw {
     color:white;}
+.colorbl{
+    color:black;}
 
 .TxtCenter{
     text-align: center;}
@@ -227,9 +196,10 @@ section{
 
 .font25{font-family:inherit; font-size: 50px;}
 
-@media screen and (max-width: 400px) { .font8, .font20 { font-size: 3em; color: #ff9900; }
-.font20B{font-size: 20px; color:#ff0019;} }
-
+/*
+@media screen and (max-width: 400px) { .font8, .font20 { font-size: 3em; color: black;}
+.font20B{font-size: 20px; color: brown;} }
+*/
 /* ---------------------------------------------------------ALGEMEEN: FORMATEN--------------------------------------------  */
 .formaat0{ width: 99%;}
 .formaat0P{ width: 99%;padding:1%;}
@@ -287,68 +257,104 @@ img .img1{ /* groot, home */
 img .img4{
     width:100%;}
 
-
 figcaption{
     text-align: center;}
 /* circle vorm: clip-path: circle(50%); */
 
-.img-text2{
-    position: absolute;
-        top: 0%;
-        left: 70%;
-    transform: translate(-20%, 10%);
-    z-index:1;
-    color: white;   
-    width: 35%;
-    font-family: normal;}
-
-
 /* ----------------------------------------------------PAGINA: HOME----------------------------------------------------------------------------------- */
-
 .img-container{
     width: 110%;
     position: relative;
         top:0%;
-        left:0%;
-    transform: translate(0%,-10%);
-    background-color:inherit;}
+        left:0%;}
+
+.img-container img{
+    width: 110%;
+    transform: translate(-3%,-5%);}
 
 .img-txt-home{
     position: absolute;
         top: 0%;
-        right: 0%;
-    transform: translate(-30%, 10%);
+        right: 5%;
+    transform: translate(-20%, 0%);
     z-index:1;
     color: black;
-    width: 35%;
+    width: 30%;
     font-family: inherit;}
 
 #buttonBK{
     position:absolute;
-        right: 4%;
+        right: 12%;
+    transform: translate(0%, 20%);
     background-color:hsla(193, 92%, 15%, 0.882);
     color:white;
-    height: 10%;}
+    height: 10%;
+    border-radius:2%;}
 
-/* ---------------------------------------------------PAGINA: OVER SBWE----------------------------------------------------------------------  */
-.afbS{ 
-    background-color: inherit;
-    width:100%;
-    position: relative;
-        top:0%;}
+/* ---------------------------------------------------PAGINA: OVER SBWE---- ------------------------------------------------------------------  */
+.img-txt-stichting{
+    position: absolute;
+        top: 10%;
+        right: 30%;
+    transform: translate(-30%, 10%);
+    z-index:1;
+    color: black;}
 
-.afbS a, .afbS li{
+.links{
+    position:absolute;
+        left:12%;
+        top:12%;
+    transform:translate(-20%,0);
+    z-index:1;}
+
+.links a {
     text-decoration: none;
     color:#00151be1;
     padding: 5%;
     list-style-type: none;}
 
 #OverS{
-    display: block;
+    display: flex;
     width: 100%;
     height: auto;
-    margin-left:0%;
-    margin-top:15%;}
+    margin-left:2%;
+    margin-top:2%;
+    border-radius:10%;}
+
+
+/* ----------------------------------------------------------PAGINA: CONTACT--------------------------------------------------------------------------------  */
+.img-container-contact{
+    width: 110%;
+    position: relative;
+        top: 0%;
+        left:0%;}
+
+.img-container-contact img{
+    width: 110%;
+    transform: translate(-5%, -5%);}
+
+.img-txt-contact{
+    position: absolute;
+        top: 5%;
+        right: 10%;
+    transform: translate(-20%, -5%);
+    z-index:1;
+    color: white;}
+
+.contact a{
+    text-decoration:none;}
+
+.tabel-contact{
+    background-color: inherit; border-radius:2%}
+
+.tabel-contact TABLE {
+    margin: 6%; border-collapse: separate;  border-spacing: 20px 20px;}
+
+.tabel-contact TD {
+    border:0px solid black; text-align: center; width: 10%;}
+
+
+/* ZIE PAGINA HOME: IMG-TXT-HOME & IMG-CONTAINER & IMG-container-img & FormRes --  */
 
 
 /* -------------------------------------------------------PAGINA: FOTO GALERIJ---------------------------------------------------------------------------------  */
@@ -371,17 +377,19 @@ figcaption{
 div.popup { 
     display: none;}
     
-div.popup:target {display: flex; justify-content: center;
-align-items: center;
-position: fixed; 
-    top: 0; 
-    left: 0; 
-z-index: 999; 
-width: 100%; 
-max-width: 100%;
-height: 100%; 
-text-align: center; 
-background:hwb(192 0% 87%);}
+div.popup:target {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    position: fixed; 
+        top: 0; 
+        left: 0; 
+    z-index: 999; 
+    width: 100%; 
+    max-width: 100%;
+    height: 100%; 
+    text-align: center; 
+    background:hwb(192 0% 87%);}
 
 div.popup a.sluiten {
 position: absolute;
@@ -401,6 +409,11 @@ max-height: 90%;}
 
 
 /* ---------------------------------------------------------PAGINA: VERHUURBK ---------------------------------------------------- */
+.img-container-bkverhuur{
+    width:110%;
+    position: relative;
+        top:0%;
+    transform: translate(.5%,-12%);}
 
 .afbBK{ 
     background-color: inherit;
@@ -415,50 +428,84 @@ max-height: 90%;}
     width: 24%;
     height: 200px;}
 
-/* -------------------------------------------------------PAGINA: RESERVERINGBK---------------------------------------------------- */
-.img-container-bkres{
-    position: relative;
-        top:0%;}
-
-.img-text-bkres{
+.img-txt-bkverhuur{
     text-align: center;
     color:white;
     position: absolute;
-        top: 15%;
-        right: 35%;
-    transform: translate(0, 0);
+        top: 24%;
+        right: 10%;
+    transform: translate(0%, 0%);
     z-index:1;
-    width: 35%;
-    font-family: inherit;}   
+    width: 35%;}   
+
+/* ZIE PAGINA RESERVERING: IMG-CONTAINER IMG-CONTAINER IMG
+
+/* ------------------------------------------------------PAGINA: RESERVERINGBK---------------------------------------------------- */
+.img-container-bkres {
+    position: relative;
+        top:0%;
+    transform: translate(-5%,-10%);}
+
+.img-container-bkres img, .img-container-bkve img{
+    width:110%;}
+
+.img-txt-bkres{
+    text-align: center;
+    color:white;
+    position: absolute;
+        top: 17%;
+        right: 15%;
+    transform: translate(0%, 0%);
+    z-index:1;
+    width: 35%;}   
 /* ------------*/ 
 #buttonRes{
     background-color: hsl(48, 75%, 94%); 
     border: solid 2px grey;
-    border-radius:5%;
     width:10%;
     height:6%;
+    border-radius:7%;
     position:absolute;
-        right:2%;}
+        right:20%;}
 
 /* ------------*/
 figcaption{
     text-align: center;}
 
 /* ------------*/
-.FormRes{ /* table reserveringbk pagina  font-size: 20px; transform: translateX(25%); */
+.FormRes{
     background-color: #92c0ec;
-    width:100%;}
+    width:100%;
+    position:relative;
+        top:0%;
+    transform:translate(0, -15%);}
 
 .invulA{
     background-color: hsl(48, 75%, 94%);
     border: solid 1px gray;
     border-radius: 8px;
-    width:70%;
+    width:100%;
     position: relative;
-    padding:5%;
+    padding:10px;
     margin-top:3%;
     margin-bottom:3%;}
 
+
+.ContainerData1{
+    margin-top:5%;
+    position: relative;
+        top:4%;
+        left:0;}
+
+.ContainerData2{
+    margin-top:5%;
+    position: relative;
+        top:4%;
+        left:10%;}
+
+.ContainerData2 TABLE { border-collapse: separate;  border-spacing: 15px 20px; }
+
+.ContainerData2 TD {text-align: center; width: 20%; }
 
 textarea {
     width: 90%;
@@ -472,12 +519,77 @@ textarea {
     margin-top:2%;
     margin-bottom:3%;}  
 
+.timepicker {
+    padding:10%;
+    z-index: 20;  
+    background-color:#fccd14;
+    position:relative;
+        left:0%;
+    border: solid 1px gray;
+    border-radius: 8px;}
 
+.datepicker {
+    padding:10%;
+    z-index: 20;  
+    background-color:#fccd14;
+    position:relative;
+        left:0%;
+    border: solid 1px gray;
+    border-radius: 8px;}
+
+.datepicker.popup:target { /* werkt deze? */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    position: fixed; 
+        top: 0; 
+        left: 0; 
+    z-index: 999; 
+    width: 15%; 
+    text-align: center; 
+    background:hwb(192 0% 87%);}
 /* ----------------------------------------------------------PAGINA: PANDEN---------------------------------------------------------------------------------  */
 
+/*----------------*/
+.img-container-pd{
+    width: 110%;
+    position: relative;
+        top:0%;
+        left:0%;
+    transform: translate(-3%,-5%);}
 
-/* --------------------------------------------------------------------------------------------------------------------------  */
-} /*asluiting media only
+.img-container-pd img{
+    width: 110%;
+    position: relative;
+        top:0%;
+        left:0%;}
 
-/* ---------ol{
-    list-style-type: none;}-----------------------------------------------------------------------------------------------------------------  */
+/*----------------*/
+
+.img-txt-pdpakh{
+    position: absolute;
+        top: 22%;
+        right: 31%;
+    transform: translate(0%, 10%);
+    z-index:1;
+    color: white;}
+
+/*----------------*/
+.img-txt-pdbart{
+    position: absolute;
+        top: 30%;
+        right: 35%;
+    transform: translate(-30%, 10%);
+    z-index:1;
+    color: white;}
+
+.opmaak-pdbart a{  
+    text-decoration: none;}
+/*----------------*/
+
+/* ---a gelijk zie pagina over SBWE ---------*/ 
+
+/* -----------} /*asluiting media only---------------------------------------------------------------------------------------------------------------  */
+
+
+/* -----------------------------------------------------------------------------------------------------------------------  */

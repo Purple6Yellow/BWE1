@@ -6,76 +6,81 @@
 <!--------------------------------------------------------------------------------------------------------------------- -->
 <div class="row">
     <div class="col-12"> 
-        <div class="img-container">      
+        <div class="img-container-contact">      
             <img src="{%static 'img/paginas/BKBuiten1.jpg' %}" alt="">
-            <div class = "img-text2"> 
-                <div class="font20B">  
+            <div class = "img-txt-contact"> 
+                <div class="font20B contact" >  
                     <br> <br>   <br> <br>
-                        Dream it <br>
-                        Wish it <br>
-                        Do it <br>
+                       <ol> Contact  </ol> <br>
+                </div>
+                <div>
+                    <button id="buttonBK">Barthkapel Verhuur</button> 
+                    <button id="buttonGalerie">Foto galerie </button> 
                 </div>
             </div>
         </div> 
     </div>
 </div>
 <!--------------------------------------------------------------------------------------------------------------------- -->
+<div class="">    
+    <div class="row">
 
-<div class="row">
-    <div class="col-1">
-        <br>
-    </div>
+        <div class="col-1"><br></div>
 
-    <div class="col-5">
-        <div>
-            <H2 class ="font16"> Onze gegevens</H2>
-            <br> <br> 
 
-            <p class ="font10">
-                <strong>Adres: </strong><br> <br>
-                Brouwersgracht 2K, <br>
-                2512 ER Den Haag <br>
-                Stichtingbwe@gmail.com <br> <br> 
+        <div class="col-10">
+            <div class="tabel-contact font13">
+            <TABLE>
+                <TR>
+                    <TH> Adres </TH>
+                    <TH> Email </TH>
+                    <TH> Telefoon </TH>
+                </TR> 
 
-                <strong>  Telefoon: </strong><br> <br>
-                06 14 18 70 96 <br> <br>
-                    (reserveringen voor de Barthkapel <br> gaan uitsluitend via de mail) <br>
-            </p>
+                <TR>
+                    <TD> Brouwersgracht 2  </TD>
+                    <TD> stichtingbwe@gmail.com</TD>
+                    <TD>  06 14 18 70 96 </TD>
+                </TR> 
+
+                <TR>
+                    <TD> 2512 ER Den Haag  </TD>
+                    <TD> <br>  </TD>
+                    <TD class="font7">  <em>Reserveringen voor de Barthkapel gaan uitsluitend via <a href="/CC/reserveringBK.html"> het reserveringsformulier </a> </em> </TD>
+                
+                </TR> 
+            </TABLE>
+            </div>
         </div>
-    </div>
 
-    <div class="col-6">   
-        <div class="afbS">  
-            <ul> 
-                <ol><img id="OverS" src="{% static 'img/Paginas/Contact.jpg' %}" alt=""></ol>
-                <ol> <br> </ol>
-                <ol class="font10"> <a href="/historie.html"> <em> Fotogalerie verleden  </em> </a> </ol>
-                <ol> <br> </ol>
-            </ul>
-        </div>
+        <div class="col-1"><br></div>
+        
     </div>
-</div>
+<!--------------------------------------------------------------------------------------------------------------------- -->
+    <div class="row">
+        <div class="col-1"><br></div>
+
+        <div class="col-10">
+            <br>    
+            <br>  
+            <br>  
+        </div>
+
+        <div class="col-1"><br> </div>
+    </div>
+<!--------------------------------------------------------------------------------------------------------------------- -->
+</div> <!--   afsluiting FormRes - achtergrond       --> 
+<!--------------------------------------------------------------------------------------------------------------------- -->
 
 <!--------------------------------------------------------------------------------------------------------------------------------------- -->
     <div class="row">  
         <div class="col-12">
             <br>
-            <br>     <br>
-            <br>
         </div>
     </div>
 <!--------------------------------------------------------------------------------------------------------------------------------------- -->
+<script src="{% static 'js/Buttons.js' %}"></script>
 
-<script> 
-    $('#buttonBK').on('click', function URL(){
-    location.href = "/CC/verhuurBK.html"
-    });
-</script>
-
-{% endblock %}
-
-
-{% block footer %}
 {% endblock %}
 
 

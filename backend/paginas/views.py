@@ -23,9 +23,6 @@ def verhuurBK (request):
 def reserveringBK (request):
     return render (request, 'CC/reserveringBK.html' )
 
-def beschikBK (request):
-    return render (request, 'CC/Beschikbaarheid.html' )
-
 def voorwaardenBK (request):
     return render (request, 'CC/voorwaardenBK.html' )
 

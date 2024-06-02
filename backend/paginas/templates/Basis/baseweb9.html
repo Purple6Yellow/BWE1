@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="nl">
-<!---------------------------------- BASIS: HEADER EN FOOTER NIET GEFIXED ------------------------------------------------------------------- -->
+<!---------------------------------- BASIS: HEADER EN FOOTER NIET GEFIXED UPDATE: APRIL/MEI 2024----------------------------------------- -->
     <head>
         <title> Stichting Behoud Waardevol Erfgoed</title>
         <meta charset = "utf-8">
 
         {% load static %}
         <!-- Style CSS--> 
-        <link rel="stylesheet" type="text/css" href="{% static 'css/basewebLaptop.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/basewebLaptop2.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/basewebMobile.css' %}">
 
         <!-- MediaQuery . viewport  (browser weet nu op welke breedte het moet worden afgebeeld)-->
@@ -39,17 +39,18 @@
     <header class = "row">
         <div class="col-12 menuboven">  
          
-            <div class= "menu1-menu-container font10">
+            <div class= "menu1-menu-container">
                 <ul id = "menu-menu" class="menu">
                     <li> <a href="/home.html">Home</a> </li> 
                     <li id="dropdown"> <a href="/CC/verhuurBK.html">Barthkapel</a>
                         <ul  class="menu1-menu2">
                             <li> <a href="/CC/reserveringBK.html"> Reservering </a> </li>
+                            <li> <a href="/CC/beschikbaarheid.html"> Beschikbaarheid </a> </li>
                             <li> <a href="/bkagenda/post_list.html"> Programma </a> </li>
                         </ul> </li>
                     <li> <a href="/panden/panden.html" > Panden </a></li> 
                     <li> <a href="/atelier.html" > Atelier </a></li>
-                    <li>  <a href="/overSBWE.html"> SBWE</a></li> 
+                    <li>  <a href="/overSBWE.html"> OverSBWE</a></li> 
                     <li>  <a href="/contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -57,30 +58,30 @@
         </div>
     </header>   
 
-<!-----------------------------------MENU: MOBILE VERSIE NIEUW-------------------------------------------------------------------------------> 
 
-
-    <header class = "row">
-        <div class="col-12 menuboven4">  
-            <div class= "menu4-menu-container font10">
-                <ul id = "menu4-menu" class="menu4">
-                    <li id="dropdown4"> <a href="/CC/verhuurBK.html">Home</a>
-                        <ul  class="menu4-menu2">
-                            <li> <a href="/CC/verhuurBK.html">Barthkapel</a> </li>
-                            <li> <a href="/CC/reserveringBK.html"> Reservering </a> </li>
-                            <li> <a href="/bkagenda/post_list.html"> Programma </a> </li>
+<!----------------------------MENU: MOBILE VERSIE------------------------------------------------------------------------------------------------> 
+<div class="row">   
+    <div class = "col-12 Mobiel">
+            <div class="menu4-menu2-container">
+                <ul>
+                    <li><a href="/home.html">Home</a> 
+                        <div class = "menu4-dropdown"> 
+                            <li id="dropdown4B"> <a href="/CC/verhuurBK.html">Barthkapel</a>
+                                <ul  class="menu4-menu2B">
+                                    <li> <a href="/CC/reserveringBK.html"> Reservering </a> </li>
+                                    <li> <a href="/bkagenda/post_list.html"> Programma </a> </li>
+                                </ul> 
+                            </li>
                             <li> <a href="/panden/panden.html" > Panden </a></li> 
                             <li> <a href="/atelier.html" > Atelier </a></li>
                             <li>  <a href="/overSBWE.html"> SBWE</a></li> 
                             <li>  <a href="/contact.html">Contact</a></li>
-                        </ul> 
+                        </div>
                     </li>
                 </ul>
             </div>
-        </div>
-    </header>   
-
- 
+    </div> 
+</div>
 <!--------------------------------------------------------------------------------------------------------------------------------------------->
 
 
@@ -93,7 +94,7 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------->
             <div class = "row">
                 <div class="col-12">   
-                    <div> <button class ="btnSBWE"> SBWE LOGO </button> </div>
+                    <div> <button class ="btnSBWE"> SBWE </button> </div>
                 </div> 
             </div> 
 
@@ -132,7 +133,28 @@
             {% endblock %}
 
     </section>
-
+<!---------------------------------- ----------------------------------------------------------------------------------------------------- -->
+<footer> 
+    {% block footer %}  
+    <div class = "row">
+        <div class="col-12" id="menuonder">
+            <div class= "menu3-menu-container">
+                <ul id = "menu3-menu">
+                    <li>  <a href="/overSBWE.html"> OverSBWE</a></li> 
+                    <li>  <a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+            <p> @ Copyright 2024 -- SBWE</p>
+    {% endblock %}
+</footer>
 <!---------------------------------- ----------------------------------------------------------------------------------------------------- -->
 </body>
 </html>
+
+
+
+
+ 
+

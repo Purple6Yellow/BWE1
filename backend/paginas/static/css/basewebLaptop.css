@@ -1,121 +1,146 @@
-/* ----------------------------------------------DESKTOP---------------------------------------------------------------------------------------------------------  */
+/* -------------------------------------------LAPTOP: GEKOPPELD AAN BASEWEB1---------------------------------------------------------------------------------------------------  */
 
-/* 
+
+/* -------------@media only screen and (min-width: 768px){------------------------------------------------------------------------------------------  */
+
+/* -------------------------------------------------------------------------------------------------------  */
+
 body{
-    background-color: rgb(0, 102, 128);}
-----------------------------------------------------------------------------------------------  */
+    background-color: hwb(54 82% 3%);}
 
 header{
     width:100%;
-    background-color:hsla(193, 92%, 15%, 0.882);
-    position: fixed;
+    background-color:none;
+    position: absolute;
         top:0px;
         left:0px;
     text-align: center;
-    color: white;
-    z-index:1;
-    max-height:15%;}
+    color: black;
+    z-index:999;
+    max-height:20%;}
 
-section{
+section{  
     width:100%;
     height:100%;
-    padding-top: 2.5%;  /* Fotogalarie, Panden*/
-    padding-bottom: 2%; /* Fotogalarie */
-    background-color: inherit;
     position: absolute;
-        top:10%;
-        left:0%;
-    transform: translate(0% 0%);}
+        top:2%;
+        bottom:2%;
+        left:0%;}
 
-footer{
-    width:100%;
-    height: 9%;
-    position: fixed;
-        bottom:0%;
-        left: 0%;
-    background-color:#00151be1;
-    text-align: center;
-    z-index:1;
-    color: #f4e049cc;}
+/* ---------------------------------------------------BASEWEB1------------------------------------------------  */
+.btnSBWE{
+    position:absolute;
+        top:5%;
+        left:2%;
+    background-color:hwb(193 18% 20% / 0.882);
+    opacity: 0.6;
+    color:white;
+    height: 10%;
+    width:10%;
+    border-radius:56px;}
+
+.PLinks{
+    background-color:hsla(193, 58%, 18%, 0.882);}
 
 
-/* -----------
- --  */
+/* -----------------------------------------------------------ALGEMEEN: MENU ---------------------------------------------  */
 
-/* ---------------------------------------------------MENU-------------------------------------------------  */
-/* -----  menu1 = menu2 = menu3 = footer
-----float:right;---
- ---*/
-#menuonder{
-    background-color: #c7a11b;}
+/*  ---MENUBOVEN > MENU-MENU-CONTAINER > MENU-MENU (ID) + MENU > DROPDOWN(ID) > MENU-MENU2   ---  */
+/* --- MENUBOVEN4 > MENU4-MENU-CONTAINER > MENU4-MENU (ID) + MENU4 > DROPDOWN4(ID) > MENU4-MENU2 ---  */
 
-.menu2-menu a{
-    color: black;}
+/* DESKTOP (HIDDEN) */
 
-.menu3-menu-container ul, .menu1-menu-container ul{
-    /* weinig te stijlen - = lijst, */
+.menuboven {  display:flex;
+    position:absolute;
+        top:10px;}
+.menu1-menu-container{display:flex;}
+.menu1-menu-container li ul{ display:none;
+    background-color: hsla(197, 91%, 48%, 0.882);
+    color: white;
+    width:30%; /* breedte van dropdown blok*/
+    height: 300%;
+    border-radius:7%;
+    border: 2px black solid;
+    position:absolute; /*werkt*/
+        top:100%;
+        right:40%;
+    transform: translate(0,0%);}
+/*dropdown*/
+.menu1-menu-container li:hover ul{display: inline-block;}
+.menu1-menu-container ul{/* weinig te stijlen - = lijst, */
+    width:60%; /* breedte van menu-items */
+    background-color:inherit;
+    position:absolute; /* plaats tov parent (absolute position): relative & static werken niet (gaat menu naar links) */
+        right: 0%;
+        top: 5%;
+    margin-right:0%;
+    padding:0%;}
+.menu1-menu-container li{ /* = menu-items */display:inline-block;
+    list-style-type: none;
+    padding-left:4%;
+    padding-right:0%;
+    padding-top: 2%;}
+.menu1-menu-container a {
+    /* = streep onder de link weghalen */
+    text-decoration: none;
+    color: white;}
+.menu1-menu-container a:hover {/* = streep onder de link weghalen */
+    color: hwb(38 9% 15%);
+    font-weight: bold;}
+
+
+/* MOBIEL */
+
+.menuboven4 {display:flex;
+    position:absolute;
+        top:10px;}
+.menu4-menu-container{display:none;}
+.menu4-menu-container li ul{ display:none;
+    background-color: hsla(197, 28%, 95%, 0.882);
+    color: black;
+    width:50%;
+    height: 400%;
+    border-radius:7%;
+    border: 2px black solid;}
+/*dropdown*/
+.menu4-menu-container li:hover ul{display: inline-block;
+    font-size: 22px;
+    color: black;}  
+.menu4-menu-container ul{/* weinig te stijlen - = lijst, */
     margin-right:3%;
     padding:0%;
     background-color:inherit;
     position:absolute; /* plaats tov parent (absolute position): relative & static werken niet (gaat menu naar links) */
-        right: 2%;}
-
-.menu3-menu-container li, .menu1-menu-container li{
-       /* = menu-items */
-    display:inline-block;
+        right: 2%;
+        top: 5%;}
+.menu4-menu-container li{ /* = menu-items */display:inline-block;
     list-style-type: none;
     padding-left:20px;
     padding-top: 2%;}
-
-.menu3-menu-container a, .menu1-menu-container a{
+.menu4-menu-container a {
     /* = streep onder de link weghalen */
     text-decoration: none;
     color: white;
     padding: 5%;}
-    
-.menu3-menu-container a:hover, .menu1-menu-container a:hover{
+.menu4-menu-container a:hover {
     /* = streep onder de link weghalen */
     text-decoration: none;
     color: #d7ad17;}
 
-.menu3-menu-container li:hover, .menu1-menu-container li:hover{
-    background-color: inherit;}
 
-/* -----menu in header ---*/
-.menuboven {
-    background-color: #c7a11b;
-    position:absolute;
-        top:10px;}
-
-.menu1-menu-container li ul{
-    display:none;
-    background-color: #00151be1;
-    width:150px;
-    height: auto;
-    border-radius:2px;
-    border: 2px black solid;
-    position:absolute;
-        top:100%;
-        left:15%;}
-
-.menu1-menu-container li:hover ul{
-    display: inline-block;}  
-
-.menu2-menu{
-    background-color: rgb(44, 20, 41); /* werkt niet */
-}
-
-/* ------------------------------------------------------------Lettertype---------------------------------------------  */
+/* -----------------------------------------------------------ALGEMEEN: LETTERTYPE---------------------------------------------  */
 .color{
     color: #f4e049cc;}
+.colorw {
+    color:white;}
+.colorbl{
+    color:black;}
 
 .TxtCenter{
     text-align: center;}
 
 .font{
-    font-family: "Gill Sans Extrabold", sans-serif;
-    font-size: 40px;
-    font-weight: bolder;}
+    font-family: "Gill Sans Extrabold", sans-serif;}
 
 .font1{ font-family: inherit; font-size: 2px;}
 .font2{ font-family: inherit; font-size: 4px;}
@@ -132,24 +157,43 @@ footer{
 .font13{ font-family: inherit; font-size: 26px;}
 .font14{ font-family: inherit; font-size: 28px;}
 .font15{ font-family: inherit; font-size: 30px;}
+.font16{ font-family: inherit; font-size: 32px;}
+.font17{ font-family: inherit; font-size: 34px;}
 
-.font18{ font-family: inherit; font-size: 36px;}
-
+.font18{ font-family: "Gill Sans Extrabold", sans-serif; font-size: 36px;}
+.font18B{ font-family: "Gill Sans Extrabold", sans-serif; font-size: 36px; font-weight: 900;}
+.font20{ font-family: inherit; font-size: 38px;}
+.font20B{ font-family: "Gill Sans Extrabold", sans-serif; font-size: 38px; font-weight: 750;}
 
 .font25{font-family:inherit; font-size: 50px;}
 
-/* ---------------/* Fluid grid - 12 kolommen */------------------------------------------------------------------------------------------  */
+/*
+@media screen and (max-width: 400px) { .font8, .font20 { font-size: 3em; color: black;}
+.font20B{font-size: 20px; color: brown;} }
+*/
+/* ---------------------------------------------------------ALGEMEEN: FORMATEN--------------------------------------------  */
+.formaat0{ width: 99%;}
+.formaat0P{ width: 99%;padding:1%;}
+.formaat1{ width:80%;}
+.formaat2{ width:60%;}
+.formaat3{ width:40%;}
+.formaat4{ width:20%;}
 
-.row{width:auto;}
+.opac{opacity: 0.5;}
+
+/* -----------------------------------ALGEMEEN: BREEDTE (Fluid grid - 12 kolommen)-----------------------------------------  */
+
+.row{
+    width:100%;
+    display:inline-block;}
 
 [class*="col-"]{
     float: left;
-    padding: 0px;}
+    padding:0%;}
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
 .col-3 {width: 25%;}
-.col-35 {width:32%;}
 .col-4 {width: 33.33%;}
 .col-5 {width: 41.66%;}
 .col-6 {width: 50%;}
@@ -158,13 +202,10 @@ footer{
 .col-9 {width: 75%;}
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
-.col-12 {width: 100%;}         
+.col-12 {width: 100%;}        
 
 
-/* Fluid grid - 12 kolommen */
-
-
-/* --------------------------------------------AFBEELDINGEN------------------------------------------------------------- */
+/* -----------------------------------------ALGEMEEN: AFBEELDINGEN------------------------------------------------------------- */
 img .img1{ /* groot, home */
     border-color: black ;
     border-radius: 10px;
@@ -187,69 +228,122 @@ img .img1{ /* groot, home */
 img .img4{
     width:100%;}
 
-
 figcaption{
     text-align: center;}
-/* circle vorm: clip-path: circle(50%);
-
-
-/* ------------------------------------------------------------------------------------------------------------------------------------  */
+/* circle vorm: clip-path: circle(50%); */
 
 /* ----------------------------------------------------PAGINA: HOME----------------------------------------------------------------------------------- */
-
 .img-container{
     width: 110%;
     position: relative;
-        left:0%;
-    transform: translateX(0%);
-    background-color:inherit;}
+        top:0%;
+        left:0%;}
 
-.img-text{
+.img-container img{
+    width: 110%;
+    transform: translate(-3%,-5%);}
+
+.img-txt-home{
     position: absolute;
         top: 0%;
-        right: 0%;
-    transform: translate(-30%, 10%);
+        right: 5%;
+    transform: translate(-20%, 0%);
     z-index:1;
     color: black;
-    width: 35%;
-    font-family: normal;}
+    width: 30%;
+    font-family: inherit;}
 
 #buttonBK{
     position:absolute;
-        right: 4%;
+        right: 12%;
+    transform: translate(0%, 20%);
     background-color:hsla(193, 92%, 15%, 0.882);
     color:white;
-    height: 10%;}
+    height: 10%;
+    border-radius:2%;}
 
-/* ---------------------------------------------------PAGINA: OVERSBWE----------------------------------------------------------------------  */
-.afbS{ 
-    background-color: inherit;
-    width:100%;
-    position: relative;
-        top:0%;}
+/* ---------------------------------------------------PAGINA: OVER SBWE---- ------------------------------------------------------------------  */
+.img-txt-stichting{
+    position: absolute;
+        top: 10%;
+        right: 30%;
+    transform: translate(-30%, 10%);
+    z-index:1;
+    color: black;}
 
-.afbS a, .afbS li{
+.links{
+    position:absolute;
+        left:12%;
+        top:12%;
+    transform:translate(-20%,0);
+    z-index:1;}
+
+.links a {
     text-decoration: none;
     color:#00151be1;
     padding: 5%;
     list-style-type: none;}
 
 #OverS{
-    display: block;
-    width: 50%;
+    display: flex;
+    width: 100%;
     height: auto;
-    margin-left:20%;
-    margin-top:15%;
-}
+    margin-left:2%;
+    margin-top:2%;
+    border-radius:10%;}
+
+
+
+
+/* ----------------------------------------------------------PAGINA: CONTACT--------------------------------------------------------------------------------  */
+.img-container-contact{
+    width: 110%;
+    position: relative;
+        top: 0%;
+        left:0%;}
+
+.img-container-contact img{
+    width: 110%;
+    transform: translate(-5%, -5%);}
+
+.img-txt-contact{
+    position: absolute;
+        top: 5%;
+        right: 30%;
+    transform: translate(-20%, -5%);
+    z-index:1;
+    color: white;}
+
+.contact a{
+    text-decoration:none;}
+
+.tabel-contact{
+    background-color: inherit; border-radius:2%}
+
+.tabel-contact TABLE {
+    margin: 6%; border-collapse: separate;  border-spacing: 20px 20px;}
+
+.tabel-contact TD {
+    border:0px solid black; text-align: center; width: 10%;}
+
+#buttonGalerie{
+    width: 60%;
+    height:10%;
+    background-color:olive;
+    position:absolute;
+        top:140%;
+        right: -10%;}
+
+/* ZIE PAGINA HOME: IMG-TXT-HOME & IMG-CONTAINER & IMG-container-img & FormRes --  */
 
 
 /* -------------------------------------------------------PAGINA: FOTO GALERIJ---------------------------------------------------------------------------------  */
 
 .fotogalerij1 {text-align: center;}
-.fotogalerij1 img {border: 3px solid #00151be1;; border-radius:1%; width:50%;}
+.fotogalerij1 img {border: 0px solid #00151be1;; border-radius:1%; width:50%;}
 
 .fotogalerij2 {margin-top:1%; margin-left: 2%; background-color: inherit;}
-.fotogalerij2 img {border: 3px solid #00151be1; border-radius:1%; width: 100px; height: 100px;}
+.fotogalerij2 img {border: 0px solid #00151be1; border-radius:1%; width: 100px; height: 100px;}
 
 .foto-popup:target { display: block; position: fixed; z-index: 999; width: 100%; height: 100%; top: 0; left: 0; background: rgba(0,0,0,0.8); text-align: center; }
 .foto-popup img { max-width: 90%; position: relative; top: 50%; transform: translateY(-50%); }
@@ -263,17 +357,19 @@ figcaption{
 div.popup { 
     display: none;}
     
-div.popup:target {display: flex; justify-content: center;
-align-items: center;
-position: fixed; 
-    top: 0; 
-    left: 0; 
-z-index: 999; 
-width: 100%; 
-max-width: 100%;
-height: 100%; 
-text-align: center; 
-background:hwb(192 0% 87%);}
+div.popup:target {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    position: fixed; 
+        top: 0; 
+        left: 0; 
+    z-index: 999; 
+    width: 100%; 
+    max-width: 100%;
+    height: 100%; 
+    text-align: center; 
+    background:hwb(192 0% 87%);}
 
 div.popup a.sluiten {
 position: absolute;
@@ -293,6 +389,11 @@ max-height: 90%;}
 
 
 /* ---------------------------------------------------------PAGINA: VERHUURBK ---------------------------------------------------- */
+.img-container-bkverhuur{
+    width:110%;
+    position: relative;
+        top:0%;
+    transform: translate(.5%,-12%);}
 
 .afbBK{ 
     background-color: inherit;
@@ -307,56 +408,235 @@ max-height: 90%;}
     width: 24%;
     height: 200px;}
 
-/* --------------------------------------------------------------FORMULIER RESERVERING BK---------------------------------------------------- */
+.img-txt-bkverhuur{
+    text-align: center;
+    color:white;
+    position: absolute;
+        top: 24%;
+        right: 10%;
+    transform: translate(0%, 0%);
+    z-index:1;
+    width: 35%;}   
+
+/* ZIE PAGINA RESERVERING: IMG-CONTAINER IMG-CONTAINER IMG
+
+/* ------------------------------------------------------PAGINA: RESERVERINGBK---------------------------------------------------- */
+.img-container-bkres {
+    position: relative;
+        top:0%;
+    transform: translate(-5%,-10%);}
+
+.img-container-bkres img, .img-container-bkve img{
+    width:110%;}
+
+.img-txt-bkres{
+    text-align: center;
+    color:white;
+    position: absolute;
+        top: 17%;
+        right: 15%;
+    transform: translate(0%, 0%);
+    z-index:1;
+    width: 35%;}   
+/* ------------*/ 
+#buttonRes{
+    background-color: hsl(48, 75%, 94%); 
+    border: solid 2px grey;
+    width:10%;
+    height:6%;
+    border-radius:7%;
+    position:absolute;
+        right:20%;}
+
+/* ------------*/
+figcaption{
+    text-align: center;}
+
+/* ------------*/
+.FormRes{
+    background-color: #92c0ec;
+    width:100%;
+    position:relative;
+        top:0%;
+    transform:translate(0, -15%);}
+
+
+.ContainerData1{
+    margin-top:5%;
+    position: relative;
+        top:4%;
+        left:0;}
+
+.ContainerData2{
+    margin-top:1%;
+    position: relative;
+        top:4%;
+        left:10%;}
+
+.ContainerData2 TABLE { border-collapse: separate;  border-spacing: 40px 15px; }
+
+.ContainerData2 TD {text-align: left; width: 20%;}
 
 textarea {
     width: 90%;
     height: 150px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    background-color: #f8f8f8;
+    border: 2px solid grey;
+    border-radius: 8px;
+    background-color: hsl(48, 75%, 94%); 
     font-size: 16px;
-    resize: none;}
-    
+    resize: none;  
+    margin-top:2%;
+    margin-bottom:3%;}  
 
-#buttonRes{
-    border: solid 3px #977705;
-    background-color: #c7a11b; 
-    border-radius:3px;
+/* datepicker en timepicker widget */
+
+.timepicker, .datepicker, .invulA {
+    padding:6%;
+    z-index: 20;  
+    background-color:hsl(47, 100%, 97%);
+    position:relative;
+        left:0%;
+    transform:translate(0%, 0);
+    border: solid 1px gray;
+    border-radius: 8px;}    
+
+#ui-datepicker-div { /* werkt deze? */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    position: fixed; 
+        top: 10%; 
+        right: 0; 
+    z-index: 30; 
+    width: 20%; 
+    height: 30%;
+    text-align: center; 
+    background:hwb(330 4% 14%);}
+
+
+/* ----------------------------------------------------------PAGINA: PANDEN---------------------------------------------------------------------------------  */
+
+/*----------------*/
+.img-container-pd{
+    width: 110%;
+    position: relative;
+        top:0%;
+        left:0%;
+    transform: translate(-3%,-5%);}
+
+.img-container-pd img{
+    width: 110%;
+    position: relative;
+        top:0%;
+        left:0%;}
+
+/*----------------*/
+
+.img-txt-pdpakh{
     position: absolute;
-        right:10%;
-}
+        top: 22%;
+        right: 31%;
+    transform: translate(0%, 10%);
+    z-index:1;
+    color: white;}
 
-/* --------------------------------------buiten formulier----------*/
-.PositieCenter{
-    text-align: center;}
+/*----------------*/
+.img-txt-pdbart{
+    position: absolute;
+        top: 30%;
+        right: 35%;
+    transform: translate(-30%, 10%);
+    z-index:1;
+    color: white;}
 
-figcaption{
+.opmaak-pdbart a{  
+    text-decoration: none;}
+/*----------------*/
+
+/* ---a gelijk zie pagina over SBWE ---------*/ 
+
+
+/* ----------------------------------------------------------PAGINA: FULLCALENDAR (RESERVERINGBK-----------------------------------------------------  */
+
+#calendar{ /*werkt!*/ 
+    height:550;
+    max-width:900px;
+    margin:0 auto;
+    background-color: whitesmoke;}
+.fc-toolbar{
+    background-color:#0000ff67;} /*werkt!*/ 
+
+.fc .fc-col-header-cell {
+    width: calc(100% / 7);
     text-align: center;
 }
+.fc .fc-day-header {
+    display: inline-block;
+    width: 100%;}
 
-.formRes{ /* table reserveringbk pagina */
-    background-color: inherit;
-    font-weight: bold;
+.fc-event-bezet{background-color:red; border-color:red;}
+.fc-event-beschikbaar{background-color:green; border-color:green;}
+
+
+/* ----------------------------------------------------------PAGINA:POST LIST (BKAGENDA)--------------------------------------------------------------------  */
+
+.img-container-posts{
+    width: 110%;
+    position: relative;
+        top:0%;
+        left:0%;}
+
+.img-container-posts img{
+    width: 110%;
+    transform: translate(-5%, -5%);}
+
+
+.img-txt-posts{
+    position: absolute;
+        top: 5%;
+        right: 10%;
+    transform: translate(-20%, -5%);
+    z-index:1;
+    color: white;}
+
+/*--- */
+.post{
+    border-radius: 3%;
+    background-color: hsl(60, 81%, 92%);
+    width: 100%;
+    margin-top:5%;
+    border: solid 2px #093d4be1;
+    text-decoration: none;
+    text-align: center;}
+
+a{text-decoration: none;}
+
+.postInh{
+    border-radius: 3%;
+    background-color: hsl(195, 43%, 51%);
+    width: 70%;
+    margin-left:25%;    
+    margin-top:5%;
+    border: solid 2px #00151be1;}
+
+#posttitel1, #posttitel2{
+    color:#00151be1;
+    text-align: center;
     font-size: 20px;
-    border: solid 1px black;
-    border-radius: 10px;
-    width: 35%;
-    position: absolute;
-    transform: translateX(25%);}
+}
 
-/* -------------------------------------------------------------------PAGINA: PANDEN---------------------------------------------------------------------------------  */
-
-.container{
-    position: absolute;
-        left: 0px;
-        top: 0px;
-    background-color:purple;
-    padding-top:3%;
-    padding-bottom:2%;
-    padding-left:0%;
-    background-color:Inherit;}
+#posttext2{
+    color:#00151be1;
+    text-align: center;
+    font-size: 20px;}
+        
+.date{
+    font-size:20px;
+    color: rgb(241, 15, 15);}
 
 
-/* ----------Contianer geen section gebruiken --*/
+/* -----------} /*asluiting media only---------------------------------------------------------------------------------------------------------------  */
+
+
+/* -----------------------------------------------------------------------------------------------------------------------  */

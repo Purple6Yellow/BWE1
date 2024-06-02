@@ -3,38 +3,69 @@
 
 
 {% block inhoud2 %}
-
 <!--------------------------------------------------------------------------------------------------------------------- -->
 <div class="row">
     <div class="col-12"> 
         <div class="img-container">      
             <img src="{%static 'img/paginas/500px BK_Lucht.jpg' %}" alt="">
             <div class = "img-txt-stichting"> 
-                <div class="font20B">
+                <div class="titel font20B">
                     Over SBWE <br>
                 </div>
-            </div>
 
-            <div class="links">
-                <ol> <img id="OverS" src="{% static 'img/Paginas/Simon3.jpg' %}" alt=""></ol>
-                <ol class="font7"> <a href="/historie.html"> <em> Fotogalerie verleden </em>  </a> </ol>
+    
+                <div class="links">
+                    <ol> <img id="OverS" src="{% static 'img/Paginas/Simon3.jpg' %}" alt=""></ol>
+                    <ol class="font7"> <a href="/historie.html"> <em> Fotogalerie verleden </em>  </a> </ol>
+                </div>
             </div>
         </div> 
     </div>
 </div>
 
 <!--------------------------------------------------------------------------------------------------------------------- -->
+
+<!---------------------------------------------------------------------------------------------------------------------->
+
 <div class="row">
     <div class="col-12"> 
-        <div class ="font20B TxtCenter"> Geschiedenis SBWE </div>
         <br>
         <br>
+        <br>
+        <br>  
+        <H2 class ="font20B TxtCenter"> Over SBWE  </H2>
+       
     </div>
 </div>
 
-<!--------------------------------------------------------------------------------------------------------------------- -->
+<!---------------------------------------------------------------------------------------------------------------------->
 
+<div class="row">
+    <div class="col-4"> 
+        <ol> <img id="OverS" src="{% static 'img/Paginas/Simon3.jpg' %}" alt=""></ol>
+        <ol> <br></ol>      
+    </div>
 
+    <div class="col-4"> 
+        <ol> <img id="OverS" src="{% static 'img/Paginas/Contact.jpg' %}" alt=""></ol>
+        <ol> <br></ol>      
+    </div>
+
+    <div class="col-4"> 
+        <ol> <img id="OverS" src="{% static 'img/Paginas/BK.jpg' %}" alt=""></ol>
+        <ol><br></ol>      
+    </div>
+</div>
+
+<!---------------------------------------------------------------------------------------------------------------------->
+<div class="row">
+    <div class="col-12">   
+            <ul> 
+                <ol> <a href="/historie.html"> <em> Fotogalerie verleden </em>  </a> </ol>
+            </ul>
+    </div>
+</div>
+<!---------------------------------------------------------------------------------------------------------------------->
 <div class="row">
     <div class="col-1">
         <br>
@@ -58,14 +89,8 @@
     </div>
 </div>
 
-<!--------------------------------------------------------------------------------------------------------------------- -->
-<div class="row">
-    <div class="col-12"> 
-      <br>    <br>   
-    </div>
-</div>
-
-
 <!---------------------------------------------------------------------------------------------------------------------->
 {% endblock %}
 
+{% block footer %}  
+{% endblock %}
