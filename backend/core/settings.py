@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-e0qlm@v1wd+zu4-xp0)+25n=$ifsp559&ln!s^7rnv!jlnc)%g
 DEBUG = True
 
 ALLOWED_HOSTS = ['vikamper.eu.pythonanywhere.com',
-                 '127.0.0.1']
+                 '127.0.0.1',
+                 'kamperv.eu.pythonanywhere.com']
 
 
 # Application definition
@@ -121,9 +122,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 STATIC_URL = '/static/'
+STATIC_ROOT = 'C:/Users/vikam/Websites/SBWE_P1/backend/paginas/static'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
