@@ -181,6 +181,8 @@ section{
 
 .opac{opacity: 0.5;}
 
+.formaatH0{height:50%;}
+
 /* -----------------------------------ALGEMEEN: BREEDTE (Fluid grid - 12 kolommen)-----------------------------------------  */
 
 .row{
@@ -501,18 +503,27 @@ textarea {
     border: solid 1px gray;
     border-radius: 8px;}    
 
-#ui-datepicker-div { /* werkt deze? */
+#ui-datepicker-div { /* ja     position: fixed; 
+    top: 10%; 
+    right: 0; */
     display: flex; 
     justify-content: center; 
     align-items: center;
-    position: fixed; 
-        top: 10%; 
-        right: 0; 
     z-index: 30; 
     width: 20%; 
     height: 30%;
     text-align: center; 
-    background:hwb(330 4% 14%);}
+    background:rgb(74, 96, 235);
+    transform: translate(-3%,10%);}
+
+.ui-datepicker-buttonpane{
+    text-align: center;
+    padding: 10px;
+    background-color: purple;}
+
+.ui-datepicker-header{
+    background-color:yellow;    }
+
 
 
 /* ----------------------------------------------------------PAGINA: PANDEN---------------------------------------------------------------------------------  */

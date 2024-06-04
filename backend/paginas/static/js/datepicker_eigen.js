@@ -4,8 +4,8 @@ $( function() {
         showAnim: "slideDown", // Animation effect
         showButtonPanel: true, // Show button panel
         position: {
-            my: "left top",
-            at: "left bottom"}
+            my: "left",
+            at: "right"}
     });
     
 });
