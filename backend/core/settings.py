@@ -59,7 +59,9 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'backend' / 'paginas' / 'templates',
+                BASE_DIR / 'index.html',
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,14 +121,21 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-
+# URL to use when referring to static files
 STATIC_URL = '/static/'
-STATIC_ROOT = 'C:/Users/vikam/Websites/SBWE_P1/backend/paginas/static'
+
+# Additional locations of static files
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),]
+    BASE_DIR / 'paginas' /'static',
+]
+
+# The directory where static files will be collected
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+
+
+#     os.path.join(BASE_DIR, "static"),
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

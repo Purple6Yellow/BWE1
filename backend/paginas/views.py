@@ -3,6 +3,10 @@ from django.shortcuts import render
 def home (request):
     return render (request, 'home.html')
 
+
+def index(request):
+    return render (request, 'index.html' )
+
 def contact (request):
     return render (request, 'contact.html')
 
@@ -39,6 +43,19 @@ def gebouwBK (request):
 
 def gebouwLO (request):
     return render (request, 'panden/looyerstr.html' )
+
+def gebouwREM(request):
+    return render (request, 'panden/rembrandt.html' )
+
+def gebouwLEP(request):
+    return render (request, 'panden/lepelstr.html' )
+
+def gebouwPR(request):
+    return render (request, 'panden/prinsegr.html' )
+
+def gebouwTU(request):
+    return render (request, 'panden/tuinhuis.html' )
+
 
 
 #post/ blog
