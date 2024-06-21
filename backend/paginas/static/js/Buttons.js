@@ -1,3 +1,4 @@
+alert (gelukt);
 $('#buttonBK').on('click', function URL(){
     location.href = "/CC/verhuurBK.html"
     });

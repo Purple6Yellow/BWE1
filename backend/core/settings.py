@@ -28,7 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['vikamper.eu.pythonanywhere.com',
                  '127.0.0.1',
-                 'kamperv.eu.pythonanywhere.com']
+                 'kamperv.eu.pythonanywhere.com',
+                 'vkamper.eu.pythonanywhere.com',
+                 'https://eerste-d-o-t-sbwe-d-o-t-nl-d-o-t-old.alvast-online.nl/',
+                 'www.eerste.sbwe.nl.old',]
 
 
 # Application definition
@@ -59,8 +62,9 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'backend' / 'paginas' / 'templates',
+        'DIRS': [BASE_DIR / 'paginas' / 'templates',
                 BASE_DIR / 'index.html',
+                BASE_DIR/ 'backend' / 'paginas' / 'templates'
                 ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -126,14 +130,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Additional locations of static files
-STATICFILES_DIRS = [
-    BASE_DIR / 'paginas' /'static',
-]
+STATICFILES_DIRS = [BASE_DIR / 'paginas' /'static',]
 
 # The directory where static files will be collected
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
-
+STATIC_ROOT = 'staticfiles'
+STATIC_ROOT= '/home/deb16246n4/domains/test.sbwe.nl.old/public_html/staticfiles'
 
 #     os.path.join(BASE_DIR, "static"),
 
@@ -141,3 +142,4 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

@@ -98,16 +98,19 @@ section{
         top:10px;}
 .menu4-menu-container{display:flex;}
 .menu4-menu-container li ul{
+    /*dropdown popup */
     display:none;
-    background-color: hsla(197, 28%, 95%, 0.882);
-    color: black;
+    background-color: hsla(64, 80%, 82%, 0.882);
+    Color:red;
+    font-size: 10px;
     width:150px;
     height: auto;
-    border-radius:2%;
+    border-radius:4%;
     border: 2px black solid;
     position:absolute;
         top:100%;
-        left:15%;}
+        right:10%;
+    transform:translate(-40%, 0);}
 /*dropdown*/
 .menu4-menu-container li:hover ul{display: inline-block;}  
 .menu4-menu-container ul{/* weinig te stijlen - = lijst, */
@@ -124,7 +127,7 @@ section{
 .menu4-menu-container a {
     /* = streep onder de link weghalen */
     text-decoration: none;
-    color: red;
+    color: inherit;
     padding: 5%;}
 .menu4-menu-container a:hover {
     /* = streep onder de link weghalen */
@@ -132,41 +135,42 @@ section{
     color: #d7ad17;}
 
 
-
-/* ----------------------------------------------------------ALGEMEEN: LETTERTYPE-------------------------------------------  */
+/* -----------------------------------------------------------ALGEMEEN: LETTERTYPE---------------------------------------------  */
+/* 
+.font-20B{ font-family: "Gill Sans Extrabold", sans-serif; font-size: 20px; font-weight: 750;color: purple;} 
+*/
 .color{
     color: #f4e049cc;}
-
+.colorw {
+    color:white;}
+.colorbl{
+    color:black;}
+/*------- */
 .TxtCenter{
-    color: purple;}
+    text-align: center;}
+/*------- */
 
-.font{
-    font-family: "Gill Sans Extrabold", sans-serif;}
+[class*="font-"]{
+    font-family:"Gill Sans Extrabold";
+    color: black;}    
 
-.font1{ font-family: inherit; font-size: 1px;}
-.font2{ font-family: inherit; font-size: 2px;}
-.font3{ font-family: inherit; font-size: 3px;}
-.font4{ font-family: inherit; font-size: 4px;}
-.font5{ font-family: inherit; font-size: 5px;}
-.font6{ font-family: inherit; font-size: 6px;}
-.font7{ font-family: inherit; font-size: 7px;}
-.font8{ font-family: inherit; font-size: 8px; color: yellow;}
-.font9{ font-family: inherit; font-size: 9px;}
-.font10{ font-family: inherit; font-size: 10px;}
-.font11{ font-family: inherit; font-size: 11px;}
-.font12{ font-family: inherit; font-size: 12px;}
-.font13{ font-family: inherit; font-size: 13px;}
-.font14{ font-family: inherit; font-size: 14px;}
-.font15{ font-family: inherit; font-size: 15px;}
-.font16{ font-family: inherit; font-size: 16px;}
-.font17{ font-family: inherit; font-size: 17px;}
-.font18{ font-family: "Gill Sans Extrabold", sans-serif; font-size: 18px;}
-.font18B{ font-family: "Gill Sans Extrabold", sans-serif; font-size: 18px; font-weight: 900;}
-.font19{ font-family: inherit; font-size: 19px;}
-.font20{ font-family: inherit; font-size: 20px;}
-.font20B{ font-family: "Gill Sans Extrabold", sans-serif; font-size: 20px; font-weight: 750;color: purple;}
-
-.font25{font-family:inherit; font-size: 50px;}
+.font-7{font-size: 7px;}
+.font-8{font-size: 8px; color: #ff5500;}
+.font-9{font-size: 9px;}
+.font-10{font-size: 10px;}
+.font-11{font-size: 11px;}
+.font-12{font-size: 12px;}
+.font-13{font-size: 13px;}
+.font-14{font-size: 14px;}
+.font-15{font-size: 15px;}
+.font-16{font-size: 16px;}
+.font-17{font-size: 17px;}
+.font-18{font-size: 18px;}
+.font-18B{font-size: 18px; font-weight: 900;}
+.font-19{font-size: 19px;}
+.font-20{font-size: 20px;}
+.font-20B{font-size: 20px;font-weight: 750;}
+.font-25{font-size: 50px;}
 
 /* ---------------------------------------------------------ALGEMEEN: FORMATEN--------------------------------------------  */
 .formaat0{ width: 99%;}
@@ -188,20 +192,8 @@ section{
     float: left;
     padding:0%;}
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}        
-
-
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {width: 100%;}
+    
 /* -----------------------------------------ALGEMEEN: AFBEELDINGEN------------------------------------------------------------- */
 img .img1{ /* groot, home */
     border-color: black ;
@@ -267,25 +259,36 @@ figcaption{
     color:white;
     height: 10%;}
 
-/* ---------------------------------------------------PAGINA: OVER SBWE----------------------------------------------------------------------  */
-.afbS{ 
-    background-color: inherit;
-    width:100%;
-    position: relative;
-        top:0%;}
+/* ---------------------------------------------------PAGINA: OVER SBWE---- ------------------------------------------------------------------  */
+.img-txt-stichting{
+    position: absolute;
+        top: 10%;
+        right: 30%;
+    transform: translate(-30%, 10%);
+    z-index:1;
+    color: black;}
 
-.afbS a, .afbS li{
+.links{
+    position:absolute;
+        left:12%;
+        top:12%;
+    transform:translate(-20%,0);
+    z-index:1;}
+
+.links a {
     text-decoration: none;
     color:#00151be1;
     padding: 5%;
     list-style-type: none;}
 
 #OverS{
-    display: block;
-    width: 100%;
-    height: auto;
-    margin-left:0%;
-    margin-top:15%;}
+    display: flex;
+    margin-left:12%;
+    margin-top:2%;
+    border-radius:10%;}
+
+
+
 
 /* ----------------------------------------------------------PAGINA: CONTACT--------------------------------------------------------------------------------  */
 .img-txt-contact{
@@ -293,8 +296,7 @@ figcaption{
         top: 15%;
         right: 15%;
     transform: translate(-30%, 10%);
-    z-index:1;
-    color: purple;}
+    z-index:1;}
 
 .contact a{
     text-decoration:none;}

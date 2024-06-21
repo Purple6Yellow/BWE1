@@ -7,15 +7,15 @@
 
         {% load static %}
         <!-- Style CSS--> 
-        <link rel="stylesheet" type="text/css" href="{% static 'css/basewebLaptop.css' %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'css/basewebMobile.css' %}">
+        <link rel="stylesheet" type="text/css" media = "screen" href = "{% static 'css/basewebLaptop.css' %}">
+        <link rel="stylesheet" type="text/css" media = "screen" href = "{% static 'css/basewebMobile.css' %}">
 
         <!-- MediaQuery . viewport  (browser weet nu op welke breedte het moet worden afgebeeld)-->
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
  
         <!-- Javascript           <script src="/static/js/jquery.js"></script>-->
-        <script src=" {% static 'js/jquery.js' %} "></script>
-        <script src=" {% static 'js/jquery.min.js' %} "></script>
+        <script src = "{% static 'js/jquery.js' %}" type=”text/javascript></script>
+        <script src = "{% static 'js/jquery.min.js' %}" type=”text/javascript ></script>
 
 
         <!-- Javascript / Ajax     <script src="{% static 'js/jquery-ui.js' %}"></script>-->
@@ -39,9 +39,9 @@
     <header class = "row">
         <div class="col-12 menuboven">  
          
-            <div class= "menu1-menu-container font10">
+            <div class= "menu1-menu-container font-10">
                 <ul id = "menu-menu" class="menu">
-                    <li> <a href="/home.html">Home</a> </li> 
+                    <li> <a href="/basis/index.html">Home</a> </li> 
                     <li id="dropdown"> <a href="/CC/verhuurBK.html">Barthkapel</a>
                     <li> <a href="/panden/panden.html" > Panden </a></li> 
                     <li>  <a href="/overSBWE.html"> SBWE</a></li> 
@@ -57,9 +57,9 @@
 
     <header class = "row">
         <div class="col-12 menuboven4">  
-            <div class= "menu4-menu-container font10">
+            <div class= "menu4-menu-container font-12 colorw">
                 <ul id = "menu4-menu" class="menu4">
-                    <li id="dropdown4"> <a href="/CC/verhuurBK.html">Home</a>
+                    <li id="dropdown4"> <a href="/basis/index.html">Home</a>
                         <ul  class="menu4-menu2">
                             <li> <a href="/CC/verhuurBK.html">Barthkapel</a> </li>
                             <li> <a href="/panden/panden.html" > Panden </a></li> 
@@ -84,7 +84,7 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------->
             <div class = "row">
                 <div class="col-12">   
-                    <div class="Ptitel font20B">
+                    <div class="Ptitel font-20B">
                     {% block txt %}
                         ..
                     {% endblock %}
@@ -96,46 +96,38 @@
 <!--------------------------------------------------------------------------------------------------------------------------------------------->
             <div class = "row">
                 <div class="col-12">   
-                    <div> <button class ="btnSBWE"> SBWE LOGO </button> </div>
+                    <div> <button class ="btnSBWE"> logo klein tekening </button> </div>
                 </div> 
             </div> 
 
-<!--------------------------------------------------------------------------------------------------------------------------------------------->
-            <div class = "row">
-                <div class="col-1">   
-                    <br>
-                </div> 
+<!--------------------------------------------------------------------------------------------------------------------- -->
+<div class="">    
+    <div class="row">
+        <div class="col-1"><br></div>
+        <div class="col-10">
+            <div class="tabel-contact font-8">
+            <TABLE>
+                <TR>
+                    <TH> Stichting Behoud Waardevol Erfgoed 2024</TH>
+                    <TH> <a href="https://www.instagram.com/barthkapeldenhaag/" target ="_blank"> <img src = "{% static 'img/Logo_Inst.jpeg' %}" alt="Logo Insta">   </a>    </TH>
+                    <TH> <a href="https://www.facebook.com/profile.php?id=100007865958510" target="_blank"> <img src = "{% static 'img/Logo_Face.jpeg' %}" alt="Logo Facebook">   </a>  </TH>
+                    <TH> stichtingbwe@gmail.com </TH> 
+                </TR> 
 
-                <div class="col-4">       
-                    <p> stichting behoud waardevol erfgoed 2024</p> 
-                </div> 
+                <TR>
+                    <TD>  </TD>
+                    <TD>   </TD>
+                    <TD>   </TD>
+                    <TD>   </TD>
+                </TR> 
+            </TABLE>
+            </div>
+        </div>
+        <div class="col-1"><br></div> 
+    </div>
+</div> 
+<!--------------------------------------------------------------------------------------------------------------------------------------- -->
+{% endblock %}
 
-                <div class="col-1"> 
-                    <a href="https://www.instagram.com/barthkapeldenhaag/" target ="_blank"> <img src="{%static 'img/Logo_Inst.jpeg' %}" alt="">   </a>      
-                </div> 
-
-                <div class="col-1">     
-                    <a href="https://www.facebook.com/profile.php?id=100007865958510" target="_blank"> <img src="{%static 'img/Logo_Face.jpeg' %}" alt="">   </a>  
-                </div> 
-              
-                <div class="col-2"> 
-                   <br>
-                </div>
-
-                <div class="col-2"> 
-                    <p> stichtingbwe@gmail.com</p> 
-                </div>
-
-                <div class="col-1"> 
-                    <br>
-                </div>
-        
-            </div> 
-           
-            {% endblock %}
-
-    </section>
-
-<!---------------------------------- ----------------------------------------------------------------------------------------------------- -->
 </body>
 </html>

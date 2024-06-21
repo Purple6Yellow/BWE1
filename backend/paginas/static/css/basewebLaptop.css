@@ -6,7 +6,7 @@
 /* -------------------------------------------------------------------------------------------------------  */
 
 body{
-    background-color: hwb(54 82% 3%);}
+    background-color: rgb(246, 249, 192);}
 
 header{
     width:100%;
@@ -144,50 +144,53 @@ section{
 .TxtCenter{
     text-align: center;}
 
-.font{
-    font-family: "Gill Sans Extrabold", sans-serif;}
+[class*="font-"]{
+    font-family:"Gill Sans";
+    color: hsl(0, 0%, 20%);
+    line-height:25px;
+    font-size:18px; /* font-9 */}
 
-.font1{ font-family: inherit; font-size: 2px;}
-.font2{ font-family: inherit; font-size: 4px;}
-.font3{ font-family: inherit; font-size: 6px;}
-.font4{ font-family: inherit; font-size: 8px;}
-.font5{ font-family: inherit; font-size: 10px;}
-.font6{ font-family: inherit; font-size: 12px;}
-.font7{ font-family: inherit; font-size: 14px;}
-.font8{ font-family: inherit; font-size: 16px;}
-.font9{ font-family: inherit; font-size: 18px;}
-.font10{ font-family: inherit; font-size: 20px;}
-.font11{ font-family: inherit; font-size: 22px;}
-.font12{ font-family: inherit; font-size: 24px;}
-.font13{ font-family: inherit; font-size: 26px;}
-.font14{ font-family: inherit; font-size: 28px;}
-.font15{ font-family: inherit; font-size: 30px;}
-.font16{ font-family: inherit; font-size: 32px;}
-.font17{ font-family: inherit; font-size: 34px;}
-
-.font18{ font-family: "Gill Sans Extrabold", sans-serif; font-size: 36px;}
-.font18B{ font-family: "Gill Sans Extrabold", sans-serif; font-size: 36px; font-weight: 900;}
-.font20{ font-family: inherit; font-size: 38px;}
-.font20B{ font-family: "Gill Sans Extrabold", sans-serif; font-size: 38px; font-weight: 750;}
-
-.font25{font-family:inherit; font-size: 50px;}
+.font-1{ font-size: 2px;}
+.font-2{ font-size: 4px;}
+.font-3{ font-size: 6px;}
+.font-4{ font-size: 8px;}
+.font-5{ font-size: 10px;}
+.font-6{ font-size: 12px;}
+.font-7{ font-size: 14px;}
+.font-8{ font-size: 16px;}
+.font-9{font-size: 18px;}
+.font-10{ font-size: 20px;}
+.font-11{  font-size: 22px;}
+.font-12{ font-size: 24px;}
+.font-13{ font-size: 26px;}
+.font-14{ font-size: 28px;}
+.font-15{ font-size: 30px;}
+.font-16{ font-size: 32px;}
+.font-17{ font-size: 34px;}
+.font-18{ font-size: 36px;}
+.font-18B{font-size: 36px; font-weight: 900;}
+.font-20{ font-size: 38px;}
+.font-20B{font-size: 38px; font-weight: 750;}
+.font-25{font-size: 50px;}
 
 /*
 @media screen and (max-width: 400px) { .font8, .font20 { font-size: 3em; color: black;}
 .font20B{font-size: 20px; color: brown;} }
 */
 /* ---------------------------------------------------------ALGEMEEN: FORMATEN--------------------------------------------  */
-.formaat0{ width: 99%;}
+.formaat0{ width: 100%;}
 .formaat0P{ width: 99%;padding:1%;}
 .formaat1{ width:80%;}
 .formaat2{ width:60%;}
-.formaat3{ width:40%;}
+.formaat3{ width:40%;}S
 .formaat4{ width:20%;}
 
 .opac{opacity: 0.5;}
 
 .formaatH0{height: 400px;}
 
+.Hoog1{max-height: 300px;}
+.Hoog2{height: 600px;}
 
 
 /* -----------------------------------ALGEMEEN: BREEDTE (Fluid grid - 12 kolommen)-----------------------------------------  */
@@ -241,16 +244,16 @@ figcaption{
     text-align: center;}
 /* circle vorm: clip-path: circle(50%); */
 
-/* ----------------------------------------------------PAGINA: HOME----------------------------------------------------------------------------------- */
-.img-container{
-    width: 110%;
+/* ----------------------------------------------------PAGINA: HOME / INDEX-------------------------------------------------------------------- */
+.img-container-home{
+    width: 100%;
     position: relative;
         top:0%;
         left:0%;}
 
-.img-container img{
-    width: 110%;
-    transform: translate(-3%,-5%);}
+.img-container-home img{
+    width: 130%;
+    transform: translate(0%,0%);} 
 
 .img-txt-home{
     position: absolute;
@@ -271,7 +274,13 @@ figcaption{
     height: 10%;
     border-radius:2%;}
 
-/* ---------------------------------------------------PAGINA: OVER SBWE---- ------------------------------------------------------------------  */
+/* ---------------------------------------------------PAGINA: OVER SBWE----------------------------------------------------------------------  */
+.img-container-SBWE{
+    width: 80%;
+    position: relative;
+        top:0%;
+        left:0%;}
+
 .img-txt-stichting{
     position: absolute;
         top: 10%;
@@ -295,11 +304,14 @@ figcaption{
 
 #OverS{
     display: flex;
-    width:40%;
-    height: auto;
     margin-left:12%;
     margin-top:2%;
     border-radius:10%;}
+
+.Vlak1_3{
+    padding: 5%;
+    margin: 5%;}
+
 
 
 
@@ -330,7 +342,7 @@ figcaption{
     background-color: inherit; border-radius:2%}
 
 .tabel-contact TABLE {
-    margin: 0%; border-collapse: separate;  border-spacing: 20px 10px; padding:2px; }
+    margin: 0%; border-collapse: separate;  border-spacing: 20px 10px; padding:1px; }
 
 .tabel-contact TD {
     border:0px solid black; text-align: center; width: 10%;}
@@ -352,7 +364,10 @@ figcaption{
 .fotogalerij1 img {border: 0px solid #00151be1;; border-radius:1%; width:50%;}
 
 .fotogalerij2 {margin-top:1%; margin-left: 2%; background-color: inherit;}
+/*
 .fotogalerij2 img {border: 0px solid #00151be1; border-radius:1%; width: 100px; height: 100px;}
+*/
+.fotogalerij2 img {border: 0px solid #00151be1; border-radius:1%; width: 95%; height: 95%; max-height: 250px;}
 
 .foto-popup:target { display: block; position: fixed; z-index: 999; width: 100%; height: 100%; top: 0; left: 0; background: rgba(0,0,0,0.8); text-align: center; }
 .foto-popup img { max-width: 90%; position: relative; top: 50%; transform: translateY(-50%); }
@@ -537,14 +552,14 @@ textarea {
 
 /*----------------*/
 .img-container-pd{
-    width: 110%;
+    width: 100%;
     position: relative;
         top:0%;
         left:0%;
-    transform: translate(-3%,-5%);}
+    transform: translate(-2%,0%);}
 
 .img-container-pd img{
-    width: 110%;
+    width: 100%;
     position: relative;
         top:0%;
         left:0%;}
@@ -560,6 +575,13 @@ textarea {
     color: white;}
 
 /*----------------*/
+.img-container-pdbart{
+    width: 100%;
+    position: relative;
+        top:0%;
+        left:0%;
+    transform: translate(0%,0%);}
+
 .img-txt-pdbart{
     position: absolute;
         top: 30%;
@@ -570,7 +592,18 @@ textarea {
 
 .opmaak-pdbart a{  
     text-decoration: none;}
+
 /*----------------*/
+.img-container-pdtuin{
+    width: 100%;
+    position: relative;
+        top:0%;
+        left:0%;
+    transform: translate(0%,0%);}
+
+/*----------------*/
+
+<!---------------------------------------------------------------------------------------------------------------------->
 
 /* ---a gelijk zie pagina over SBWE ---------*/ 
 
