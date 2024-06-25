@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['vikamper.eu.pythonanywhere.com',
                  'kamperv.eu.pythonanywhere.com',
                  'vkamper.eu.pythonanywhere.com',
                  'https://eerste-d-o-t-sbwe-d-o-t-nl-d-o-t-old.alvast-online.nl/',
-                 'www.eerste.sbwe.nl.old',]
+                 'www.eerste.sbwe.nl',]
 
 
 # Application definition
@@ -43,8 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bkagenda',
     'paginas',
+    'bkagenda',
+ 
 ]
 
 MIDDLEWARE = [

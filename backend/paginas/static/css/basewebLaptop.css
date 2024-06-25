@@ -27,17 +27,27 @@ section{
         bottom:2%;
         left:0%;}
 
-/* ---------------------------------------------------BASEWEB1------------------------------------------------  */
-.btnSBWE{
+/* ---------------------------------------------------BASEWEB1------------------------------------------------
+*/
+ /* wordt niet meer gebruikt, misschien nog voor een logo met button ??? */ 
+.btnSBWE {
     position:absolute;
         top:5%;
         left:2%;
     background-color:hwb(193 18% 20% / 0.882);
     opacity: 0.6;
     color:white;
+    z-index: 999;
     height: 10%;
-    width:10%;
+    width:10%; 
     border-radius:56px;}
+
+.logo img{
+    clip-path: circle(50%); 
+    width: 100px;
+    position: absolute;
+        top: 5%;
+        left: 5%;}
 
 .PLinks{
     background-color:hsla(193, 58%, 18%, 0.882);}
